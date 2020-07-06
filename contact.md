@@ -1,9 +1,9 @@
 ---
 layout: contact
-title: Contact Me
+title: Contact Me \| Luka Stanojevic
 ---
 <img class="bulb" src="assets/images/bulb.png">
-<form id="form" class="form">
+<form id="form" class="form" action="contactform.php" method="post">
     <h1 class="form-title">got an idea?</h1>
     <fieldset class="form__information">
         <label for="name" class="form__item">
@@ -30,6 +30,6 @@ title: Contact Me
     </fieldset>
     <fieldset class="form__bottom">
         <button class="form__submit"
-                type="submit">submit</button>
+                type="submit" name="submit">submit</button>
     </fieldset>
 </form>

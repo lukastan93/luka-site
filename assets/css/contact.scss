@@ -30,7 +30,7 @@ body{
 /* Block */
 
 .form {
-    width: 1192px;
+    width: 70%;
     margin-right: 161px;
     margin-left: auto;
 }
@@ -49,14 +49,10 @@ body{
     border-bottom: solid 2px white;
 }
 
-/* Element */
-
 .bulb{
     height: 540px;
-    width:200px;
     position: absolute;
-    left: 189px;
-    top: 0;
+    left: 100px;
 }
 
 form * {
@@ -141,6 +137,7 @@ form * {
 
 .form__to-fill--textarea {
     height: 250px;
+    resize: none;
 }
 
 .form__to-fill:focus + span {
@@ -156,22 +153,165 @@ form * {
     width: 100%;
 }
 
-// .form__item--error {
-//     border-color: tomato;
-// }
 
-// .form__item--error .form__animation {
-//     background-color: tomato;
-//     bottom: 0;
-// }
+/* Element */
+@media (min-width: 1600px){
+    .bulb{
+        height: 540px;
+        position: absolute;
+        left: 100px;
+    }
 
-// .form__item--error .form__to-fill {
-//     color: white;
-// }
+    form * {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-size: 40px;
+        color: white;
+    }
+
+    .form-title{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700px;
+        font-size: 105px;
+        text-transform: uppercase;
+        margin-top: 130px;
+        padding-bottom: 5px;
+    }
+
+    .form__item {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: solid 2px white;
+        position: relative;
+        overflow: hidden;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .form__instruction {
+        width: 264px;
+    }
+
+    .form__to-fill {
+        width: calc(100% - 250px);
+        color: lightgray;
+        padding-left: 32px;
+    }
+
+    .form__animation {
+        background-color: white;
+        width: calc(100% - 250px);
+        position: absolute;
+        bottom: -100%;
+        left: 264px;
+        height: 100%;
+        border: none;
+        transition: all 0.25s ease-out;
+        z-index: -1;
+    }
+
+    .form__submit {
+        display: block;
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .form__submit:hover{
+        color: black;
+    }
+
+    .form__submit:before{
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: auto;
+        right: 0;
+        width: 0;
+        height: 95px;
+        background-color: white;
+        transition: width 0.25s ease-out;
+        z-index: -1;
+    }
+
+    /* Modifier */
+    .form__item--top {
+        align-items: flex-start;
+    }
+
+    .form__to-fill--textarea {
+        height: 250px;
+        resize: none;
+    }
+
+    .form__to-fill:focus + span {
+        bottom: 0;
+    }
+
+    .form__to-fill:focus {
+        color: #6B6B6B;
+    }
+
+    .form__submit:hover:before, .form__submit:focus:before {
+        left: 0;
+        width: 100%;
+    }
+
+    // .form__item--error {
+    //     border-color: tomato;
+    // }
+
+    // .form__item--error .form__animation {
+    //     background-color: tomato;
+    //     bottom: 0;
+    // }
+
+    // .form__item--error .form__to-fill {
+    //     color: white;
+    // }
+}
+
+@media (max-width: 1600px){
+    .bulb{
+        height: 400px;
+        position: absolute;
+        left: 30px;
+        top:0;
+    }
+
+    .form{
+        width: 70%;
+        margin: 0 20px 0 auto;
+    }
+
+    .form__submit{
+        width: 100%;
+    }
+}
 
 /* Responsive */
 @media (max-width: 800px) {
     /* Block */
+    .bulb{
+        height: 250px;
+        position: absolute;
+        right: 15px;
+        left: auto;
+        top:0;
+    }
+
+    .form-title{
+        font-size: 70px;
+    }
+
+    .form{
+        width: 90%;
+        margin: 0 auto 0 auto;
+    }
+
     .form__instruction {
         width: 170px;
     }
@@ -187,15 +327,35 @@ form * {
         left: 170px;
     }
 
+    .form__submit{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 550px) {
 
     /* Block */
+    .form *{
+        font-size: 20px;
+    }
+
     .form {
         position: relative;
         transform: none;
         padding: 0 20px;
+        width:100%;
+    }
+
+    .form-title{
+        font-size: 45px;
+    }
+
+    .bulb{
+        height: 200px;
+        position: absolute;
+        right: 25px;
+        left: auto;
     }
 
     .form__informations {
@@ -235,5 +395,9 @@ form * {
         left: 0;
         height: 5px;
         width: 100%;
+    }
+
+    .form__submit{
+        width:100%;
     }
 }

@@ -1,19 +1,27 @@
-<div class="menu-container">
-    <input type="checkbox" class="toggler">
-    <div class="hamburger">
-      <div></div>
-    </div>
-    <div class="menu">
-      <div>
+<div class="wrapper">
+  <a href="/"><img src="assets/images/brain.png" class="brain"></a>
+  <div class="menu-container">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="menu">
         <div>
-          <ul>
-            {% for item in site.data.navigation %}
-            <li><a href="{{ item.link }}">
-              {{ item.name }}
-            </a></li>
-          {% endfor %}
-          </ul>
+          <div>
+            <ul>
+              {% for item in site.data.navigation %}
+              <li><a href="{{ item.link }}">
+                {{ item.name }}
+              </a></li>
+            {% endfor %}
+            </ul>
+            <div class="social-links">
+              <a href="https://twitter.com/luka_stanoje" target="_blank"><img src="assets/images/twitter.png"></a>
+              <a href="https://www.instagram.com/luka.web.dev/" target="_blank"><img src="assets/images/instagram.png"></a>
+              <a href="https://linkedin.com/in/luka-stanojevic" target="_blank"><img src="assets/images/linkedin.png"></a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+  </div>
 </div>

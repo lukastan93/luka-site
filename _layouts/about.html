@@ -2,11 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/about.css">
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="{{ "favicon.png" | prepend: site.baseurl }}" >
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    <div class="content-wrapper">
+      {% include navigation.html %}
+      {{ content }}
+    </div>
+    {% include footer.html %}
   </body>
 </html>

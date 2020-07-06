@@ -4,24 +4,22 @@
 
 body{
     background-color: black;
-    display:flex;
-    min-height: 100vh;
 }
 
 h1{
-    font-size: 53px;
+    font-size: 35px;
     color: white;
     font-family: "Montserrat", sans-serif;
     max-width: 1078px;
+    margin-bottom: 2rem;
 }
 
 h2{
-    font-size: 35px;
+    font-size: 20px;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     color: #9F9F9F;
     max-width: 678px;
-    margin-top: 84px;
 }
 
 .about-container{

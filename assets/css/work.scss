@@ -1,0 +1,95 @@
+---
+---
+@import "main";
+
+.work-page-wrapper{
+    text-align: center;
+}
+
+body{
+    background-color: white;
+}
+
+.hamburger>div{
+    background-color: black;
+}
+  
+.hamburger>div:before, .hamburger>div:after{
+    background-color: black;
+}
+
+.toggler:checked ~ .hamburger > div{
+    background-color: white;
+}
+
+.toggler:checked ~ .hamburger > div:before, .toggler:checked ~ .hamburger>div:after{
+    background-color: white;
+}
+
+.content-wrapper{
+    margin-bottom: 4rem;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: black;
+    text-transform: uppercase;
+    margin-top: 8rem;
+}
+
+.image-container{
+    width: 500px;
+    height: 372px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-pic{
+    width: 500px;
+    height: 372px;
+    transition: 0.3s;
+    display: block;
+    position: relative;
+    transform: scale(1.5);
+    transform-origin: 50% 17%;
+    filter: grayscale(100%);
+}
+
+.project-pic:hover{
+    transform: scale(1);
+    filter: none;
+}
+
+
+.image-gallery-wrapper-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 6rem 0 4rem 0;
+}
+
+.image-gallery-wrapper-2{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 375px){
+    .image-container{
+        width: 350px;
+        height: 260px;
+        margin: 2rem;
+    }
+
+    .project-pic{
+        width: 350px;
+        height: 260px;
+    }
+
+    .image-gallery-wrapper-1{
+        margin: 1rem 0 4rem 0;
+    }
+}
